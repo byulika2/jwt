@@ -1,6 +1,5 @@
 package com.cos.jwt.model;
 
-import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -11,6 +10,7 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
 import org.springframework.util.StringUtils;
 
 @Getter
@@ -19,6 +19,7 @@ import org.springframework.util.StringUtils;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
+@ToString
 public class User {
 
   @Id
@@ -28,8 +29,8 @@ public class User {
   private String password;
   private String role; // USER,ADMIN
 
-  public List<String> getRoleList(){
-    if (StringUtils.hasText(role)){
+  public List<String> getRoleList() {
+    if (StringUtils.hasText(role)) {
       return List.of(this.role.split(","));
     }
     return List.of();
