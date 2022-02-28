@@ -1,0 +1,11 @@
+version: 0.0 # version 필수 값, 0.0이 고정
+os: linux # ec2에 배포하는 경우 필수 값, amazon linux -> linux
+
+files:
+  - source:  /
+    destination: /home/ec2-user/jenkins  # Artifact가 unzip된 결과가 생성될 디렉토리명, 배포할 위치
+    overwrite: yes
+
+hooks:
+  ApplicationStart:
+    - location: scripts/deploy.sh    # ApplicationStart 샘명 주기에서 deploy.sh 실행
