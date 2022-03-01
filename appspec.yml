@@ -8,4 +8,4 @@ files:
 
 hooks:
   ApplicationStart:
-    - location: Scripts/deploy.sh    # ApplicationStart 샘명 주기에서 deploy.sh 실행
+    - location: scripts/deploy.sh    # ApplicationStart 생명주기에서 deploy.sh 실행
