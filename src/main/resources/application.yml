@@ -8,6 +8,7 @@ server:
       force: true
 
 spring:
+  profiles: local # 기본환경을 local로 사용
   h2:
     console:
       enabled: true
