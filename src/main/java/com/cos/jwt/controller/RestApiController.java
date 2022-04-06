@@ -18,7 +18,7 @@ public class RestApiController {
 
   @GetMapping("/home")
   public String home() {
-    return "<h1>Home Sweet Home!! 왜 안되니?</h1>";
+    return "<h1>Home Sweet Home!!</h1>";
   }
 
   @PostMapping("/join")
