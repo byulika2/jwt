@@ -12,6 +12,9 @@ permissions:
     group: ec2-user
 
 hooks:
+  BeforeInstall:
+    - location: deploy-before.sh
+      runas: ec2-user
   ApplicationStart:
     - location: scripts/deploy-stage.sh    # ApplicationStart 단계에서 해당 파일을 실행해라
       timeout: 60
