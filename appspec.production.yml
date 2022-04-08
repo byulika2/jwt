@@ -13,7 +13,7 @@ permissions:
 
 hooks:
   BeforeInstall:
-    - location: deploy-before.sh
+    - location: scripts/deploy-before.sh
       runas: ec2-user
   ApplicationStart:
     - location: scripts/deploy-production.sh    # ApplicationStart 단계에서 해당 파일을 실행해라
